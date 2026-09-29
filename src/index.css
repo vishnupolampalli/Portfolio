@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: 70px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b1120;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Main professional background */
+body {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(34, 211, 238, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(59, 130, 246, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #020617 0%,
+      #0b1120 50%,
+      #020617 100%
+    );
+}
+
+/* Very subtle grid */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(148, 163, 184, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+}
+
+/* Soft screen glow */
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.06),
+    transparent 65%
+  );
+
+  filter: blur(40px);
+}
+
+section {
+  position: relative;
+}
+.mouse-light {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+
+  left: var(--mouse-x, 50%);
+  top: var(--mouse-y, 30%);
+
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.10),
+    rgba(59, 130, 246, 0.04),
+    transparent 70%
+  );
+
+  filter: blur(25px);
+
+  pointer-events: none;
+  z-index: -1;
+
+  transition:
+    left 0.15s ease-out,
+    top 0.15s ease-out;
+}
