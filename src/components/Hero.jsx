@@ -9,7 +9,6 @@ function Hero() {
       <div className="max-w-6xl mx-auto px-6 w-full">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
-          {/* Left Side */}
           <div className="flex-1">
             <p className="text-cyan-400 text-base mb-6">
               ✨ AI & ML Student Portfolio
@@ -33,6 +32,8 @@ function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-9">
+              
+              {/* View Projects */}
               <Link
                 to="projects"
                 smooth={true}
@@ -44,21 +45,25 @@ function Hero() {
                 </button>
               </Link>
 
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="border border-gray-700 text-white px-6 py-4 rounded-xl hover:border-cyan-400 hover:text-cyan-400 transition"
+              {/* Contact Me */}
+              <Link
+                to="contact"
+                smooth={true}
+                duration={0}
+                offset={-70}
               >
-                📄 View Resume
-              </a>
+                <button className="border border-gray-700 text-white px-6 py-4 rounded-xl hover:border-cyan-400 hover:text-cyan-400 transition cursor-pointer">
+                  Contact Me
+                </button>
+              </Link>
+
             </div>
           </div>
 
           {/* Profile Photo */}
           <div className="flex-shrink-0">
             <img
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Polampalli Vishnu"
               className="w-56 h-56 md:w-72 md:h-72 object-cover rounded-full border-4 border-cyan-400 shadow-lg"
             />
