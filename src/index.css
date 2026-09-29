@@ -8,12 +8,12 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #0b1120;
-  color: #f8fafc;
+  background: #f8fafc;
+  color: #111827;
   overflow-x: hidden;
 }
 
-/* Main professional background */
+/* Clean light background */
 body {
   background:
     radial-gradient(
@@ -23,18 +23,13 @@ body {
     ),
     radial-gradient(
       circle at 80% 30%,
-      rgba(59, 130, 246, 0.08),
+      rgba(59, 130, 246, 0.06),
       transparent 30%
     ),
-    linear-gradient(
-      135deg,
-      #020617 0%,
-      #0b1120 50%,
-      #020617 100%
-    );
+    #f8fafc;
 }
 
-/* Very subtle grid */
+/* Subtle grid */
 body::before {
   content: "";
   position: fixed;
@@ -44,19 +39,19 @@ body::before {
 
   background-image:
     linear-gradient(
-      rgba(148, 163, 184, 0.025) 1px,
+      rgba(15, 23, 42, 0.025) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(148, 163, 184, 0.025) 1px,
+      rgba(15, 23, 42, 0.025) 1px,
       transparent 1px
     );
 
   background-size: 45px 45px;
 }
 
-/* Soft screen glow */
+/* Soft background light */
 body::after {
   content: "";
   position: fixed;
@@ -70,7 +65,7 @@ body::after {
 
   background: radial-gradient(
     circle,
-    rgba(34, 211, 238, 0.06),
+    rgba(34, 211, 238, 0.05),
     transparent 65%
   );
 
@@ -80,6 +75,8 @@ body::after {
 section {
   position: relative;
 }
+
+/* Mouse light */
 .mouse-light {
   position: fixed;
   width: 350px;
@@ -92,8 +89,8 @@ section {
 
   background: radial-gradient(
     circle,
-    rgba(34, 211, 238, 0.10),
-    rgba(59, 130, 246, 0.04),
+    rgba(34, 211, 238, 0.07),
+    rgba(59, 130, 246, 0.03),
     transparent 70%
   );
 
@@ -105,4 +102,50 @@ section {
   transition:
     left 0.15s ease-out,
     top 0.15s ease-out;
+}
+
+/* Light theme overrides */
+
+.bg-\[\#111827\] {
+  background-color: #ffffff !important;
+}
+
+.bg-\[\#0f1425\] {
+  background-color: #ffffff !important;
+}
+
+.text-white {
+  color: #111827 !important;
+}
+
+.text-gray-200 {
+  color: #374151 !important;
+}
+
+.text-gray-300 {
+  color: #4b5563 !important;
+}
+
+.text-gray-400 {
+  color: #6b7280 !important;
+}
+
+.text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.border-gray-800 {
+  border-color: #e5e7eb !important;
+}
+
+.border-gray-700 {
+  border-color: #d1d5db !important;
+}
+
+.bg-gray-800 {
+  background-color: #f3f4f6 !important;
+}
+
+.bg-gray-800\/60 {
+  background-color: rgba(243, 244, 246, 0.8) !important;
 }

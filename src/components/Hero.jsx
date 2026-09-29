@@ -27,7 +27,7 @@ function Hero() {
             </p>
 
             <p className="text-gray-400 mt-5 max-w-3xl text-base md:text-lg leading-7">
-              Fresher with project-based experience in Python, Java, React,
+              Fresher with strong project-based experience in Python, Java, React,
               MySQL, NLP, AI applications, and data-driven solutions.
             </p>
 

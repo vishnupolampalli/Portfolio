@@ -5,7 +5,6 @@ function Navbar() {
     "about",
     "skills",
     "projects",
-    "education",
     "certifications",
     "experience",
     "contact",
